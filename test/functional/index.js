@@ -130,6 +130,20 @@ describe('Functional tests', () => {
         })
     );
 
+    it('persists address on manual entry step when returning from later step (bugfix)', () =>
+      browser.url('/one')
+        .$('a[href*="step=manual"]')
+        .click()
+        .$('textarea')
+        .setValue('1 High Street')
+        .submitForm('form')
+        .back()
+        .getValue('textarea')
+        .then(text => {
+          assert.equal(text, '1 High Street');
+        })
+    );
+
   });
 
   describe('required', () => {
