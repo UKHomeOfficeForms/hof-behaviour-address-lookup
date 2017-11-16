@@ -2,6 +2,7 @@
 
 const webdriverio = require('webdriverio');
 const options = {
+  deprecationWarnings: false,
   desiredCapabilities: {
     browserName: 'chrome'
   }
