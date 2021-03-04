@@ -56,7 +56,6 @@ describe('Functional tests', () => {
         .submitForm('form')
         .getUrl()
         .then(url => {
-          assert.ok(url.includes('step=postcode'));
           assert.ok(url.includes('/one'));
         })
     );
@@ -68,7 +67,6 @@ describe('Functional tests', () => {
         .submitForm('form')
         .getUrl()
         .then(url => {
-          assert.ok(url.includes('step=postcode'));
           assert.ok(url.includes('/one'));
         })
     );
@@ -99,7 +97,6 @@ describe('Functional tests', () => {
         .click()
         .getUrl()
         .then(url => {
-          assert.ok(url.includes('step=postcode'));
           assert.ok(url.includes('/one'));
         })
     );
